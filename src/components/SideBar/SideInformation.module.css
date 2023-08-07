@@ -1,0 +1,74 @@
+.side-information {
+  display: flex;
+  justify-content: center;
+  gap: 170px;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+/* .icons {
+  position: relative;
+  height: 0px;
+} */
+
+.main-information {
+  margin-top: 50px;
+  position: relative;
+}
+
+.main-information .icon svg {
+  position: absolute;
+  width: 13vw;
+  z-index: -1;
+}
+
+.icon-1 {
+  top: -13vh;
+  left: 10vw;
+}
+
+.main-information .icon-2 {
+  top: -5vh;
+  left: -14vw;
+}
+
+.main-information .icon-3 {
+  top: 21vh;
+  left: 13vw;
+}
+
+.main-information .icon-4 {
+  top: 50vh;
+  left: -18vw;
+}
+
+.main-information h1 {
+  margin: 0;
+  font-size: 46px;
+  text-align: center;
+}
+
+.main-information p {
+  margin: 0;
+}
+
+.temperature-information {
+  font-size: 100px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.main-information .location {
+  font-size: 40px;
+  font-weight: 100;
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+.main-information span {
+  font-size: 32px;
+  vertical-align: top;
+  line-height: 60px;
+}

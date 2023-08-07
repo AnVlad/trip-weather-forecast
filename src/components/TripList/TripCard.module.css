@@ -1,0 +1,30 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.image {
+  background-color: black;
+
+  object-fit: cover;
+
+  width: 220px;
+  height: 220px;
+}
+
+.information {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  color: rgb(74 74 74);
+  border: 2px solid rgb(247 247 247);
+}
+
+.name {
+  margin: 0;
+}
+
+.active {
+  border: 2px solid #8bc7ff;
+}

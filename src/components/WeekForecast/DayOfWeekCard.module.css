@@ -1,0 +1,16 @@
+.day-information {
+  text-align: center;
+}
+
+.day-information svg {
+  margin: 20px 0;
+}
+
+.day-name {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.temperature {
+  font-size: 14px;
+}

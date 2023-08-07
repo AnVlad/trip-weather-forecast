@@ -1,0 +1,60 @@
+.body-modal-form .form-sector {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+  gap: 5px;
+}
+
+.body-modal-form .form-sector input {
+  height: 40px;
+  padding: 5px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-select {
+  width: 900px;
+  height: 60px;
+  font-size: 20px;
+  padding-left: 10px;
+
+  appearance: none;
+}
+
+.base-select-option {
+  color: #909090;
+}
+
+.form-input {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.form-input svg {
+  position: absolute;
+  right: 20px;
+}
+
+.body-modal-form .form-sector input::placeholder {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.body-modal-form .form-sector input {
+  font-size: 16px;
+}
+
+.body-modal-form
+  .form-sector
+  input[type='date']::-webkit-calendar-picker-indicator {
+  color: #909090;
+  font-size: 24px;
+  margin-right: 10px;
+  padding-left: 600px;
+  cursor: pointer;
+}
+
+.body-modal-form label span {
+  color: #f00;
+}

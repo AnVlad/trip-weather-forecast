@@ -1,0 +1,15 @@
+.week-information {
+  margin-top: 38px;
+  overflow: auto;
+}
+
+.week {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.list {
+  display: flex;
+  margin: 40px 20px;
+  gap: 64px;
+}

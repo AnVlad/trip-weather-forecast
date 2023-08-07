@@ -1,0 +1,17 @@
+.button {
+  font-size: 22px;
+  padding: 7px 14px;
+  margin: 5px;
+  background-color: #fff;
+
+  cursor: pointer;
+
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.primary {
+  color: #fff;
+  background-color: #178fff;
+
+  border: 1px solid #178fff;
+}
