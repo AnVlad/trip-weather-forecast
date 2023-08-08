@@ -1,6 +1,7 @@
 .search-input {
   display: flex;
   position: relative;
+  justify-content: space-between;
   margin-top: 60px;
   margin-bottom: 60px;
 }
@@ -27,4 +28,21 @@
   position: absolute;
   align-self: center;
   padding-left: 20px;
+}
+
+.sort-button {
+  background-color: rgb(242, 244, 248);
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.sort-button:hover {
+  background-color: #c5c7c9; /* Lighten the background color on hover */
 }

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { useSelector } from 'react-redux';
+
 import style from './ModalForm.module.css';
+
 import getMinMaxDate from '../../helpers/getMinMaxDate';
 import cityList from '../../cityList';
-import { useSelector } from 'react-redux';
 import weather from '../../services/weather';
+import SVGDownArrow from '../UI/SVGDownArrow';
 
 const ModalForm = ({ setNewTripData }) => {
   const [city, setCity] = useState('');
@@ -69,7 +70,7 @@ const ModalForm = ({ setNewTripData }) => {
               );
             })}
           </select>
-          <FontAwesomeIcon icon={faChevronDown} style={{ color: '#909090' }} />
+          <SVGDownArrow style={{ color: '#909090', width: 20 }} />
         </div>
       </div>
 

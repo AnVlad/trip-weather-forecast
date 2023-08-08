@@ -14,14 +14,23 @@ const TripList = () => {
   const tripListState = useSelector((state) => state.tripList);
   const searchTrip = useSelector((state) => state.searchByName.searchTrip);
   const activeCity = useSelector((state) => state.currentCity);
+  const sortByType = useSelector((state) => state.sort);
 
   const filteredTripList = tripListState.filter((trip) =>
     trip.city.toLowerCase().includes(searchTrip.toLowerCase())
   );
 
+  const sortedTripList =
+    sortByType === 'byDate'
+      ? filteredTripList.sort(
+          (fstTrip, secTrip) =>
+            new Date(fstTrip.startDate) - new Date(secTrip.startDate)
+        )
+      : filteredTripList;
+
   return (
     <div className={style.list}>
-      {filteredTripList.map((city) => {
+      {sortedTripList.map((city) => {
         return (
           <TripCard
             currentCity={city}

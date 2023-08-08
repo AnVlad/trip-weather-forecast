@@ -1,21 +1,27 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+
 import Main from './components/Main';
 import ModalWindow from './components/ModalWindow/ModalWindow';
 import SideInformation from './components/SideBar/SideInformation';
-import { useEffect } from 'react';
+
 import getMinMaxDate from './helpers/getMinMaxDate';
 import { addCity } from './Slicers/tripListSlice';
-import weather from './services/weather';
 import { setCity } from './Slicers/currentCitySlice';
+import weather from './services/weather';
 
 function App() {
   const showModal = useSelector((state) => state.showModal.show);
+  const tripList = useSelector((state) => state.tripList);
+  console.log(tripList);
 
   const dispatch = useDispatch();
 
   const { minDate, maxDate } = getMinMaxDate();
 
   useEffect(() => {
+    if (tripList.length > 0) return;
+
     const setDefaultCity = async () => {
       const getWeather = (await weather.getWeather(minDate, maxDate, 'Berlin'))
         .data;

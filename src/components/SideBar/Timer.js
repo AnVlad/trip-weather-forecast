@@ -5,7 +5,12 @@ import getTimer from '../../helpers/getTimer';
 import toDoubleDigits from '../../helpers/toDoubleDigits';
 
 const Timer = ({ currentCity }) => {
-  const [time, setTime] = useState();
+  const [time, setTime] = useState({
+    days: '00',
+    hours: '00',
+    minutes: '00',
+    seconds: '00',
+  });
 
   useEffect(() => {
     const { days, hours, minutes, seconds } = getTimer(currentCity.startDate);
@@ -16,7 +21,6 @@ const Timer = ({ currentCity }) => {
       minutes: minutes,
       seconds: seconds,
     });
-    console.log(days, hours, minutes, seconds);
 
     const timer = setInterval(() => {
       setTime((prevTime) => {
@@ -40,7 +44,8 @@ const Timer = ({ currentCity }) => {
             seconds: 59,
           };
         }
-        // Timer has reached 0, clear the interval
+
+        // To clear the interval, when timer reaches 0
         clearInterval(timer);
         return prevTime;
       });

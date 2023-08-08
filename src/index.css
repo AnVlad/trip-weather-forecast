@@ -43,3 +43,21 @@ aside {
 
   z-index: -5;
 }
+
+@media only screen and (max-width: 1200px) {
+  .App {
+    overflow: scroll;
+    height: 100vh;
+    flex-wrap: wrap;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  aside {
+    height: 100vh;
+    width: 100%;
+    position: unset;
+  }
+}

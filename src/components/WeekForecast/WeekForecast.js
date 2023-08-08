@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import style from './WeekForecast.module.css';
 
@@ -10,11 +10,31 @@ const WeekForecast = () => {
     (state) => state.currentCity?.weather?.days
   );
 
+  const scrollButtonRef = useRef(null);
+
+  const scroll = (scrollOffset) => {
+    scrollButtonRef.current.scrollLeft += scrollOffset;
+  };
+
   if (!currentCityWeatherByDays) return null;
   return (
     <div className={style['week-information']}>
-      <h2 className={style.week}>Week</h2>
-      <div className={style.list}>
+      <div className={style['week-information-header']}>
+        <h2 className={style.week}>Week</h2>
+        <div className={style['scroll-week-buttons']}>
+          <button
+            className={style['scroll-button']}
+            onClick={() => scroll(-164 * 3)}>
+            {'<'}
+          </button>
+          <button
+            className={style['scroll-button']}
+            onClick={() => scroll(164 * 3)}>
+            {'>'}
+          </button>
+        </div>
+      </div>
+      <div className={style.list} ref={scrollButtonRef}>
         {currentCityWeatherByDays.map((day) => {
           return (
             <DayOfWeekCard
