@@ -70,7 +70,7 @@ const ModalForm = ({ setNewTripData }) => {
               );
             })}
           </select>
-          <SVGDownArrow style={{ color: '#909090', width: 20 }} />
+          <SVGDownArrow style={{ color: '#909090', width: 16 }} />
         </div>
       </div>
 
