@@ -1,8 +1,7 @@
 .card {
   background-color: rgb(242 244 248);
-  max-height: 220px;
-
-  min-width: 220px;
+  max-height: 180px;
+  min-width: 180px;
 
   border: none;
 

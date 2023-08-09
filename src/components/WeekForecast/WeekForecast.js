@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import style from './WeekForecast.module.css';
 
@@ -12,6 +12,18 @@ const WeekForecast = () => {
 
   const scrollButtonRef = useRef(null);
 
+  const [showButtons, setShowButtons] = useState(false);
+
+  useEffect(() => {
+    const container = scrollButtonRef.current;
+
+    if (container.scrollWidth > container.clientWidth) {
+      setShowButtons(true);
+    } else {
+      setShowButtons(false);
+    }
+  }, [currentCityWeatherByDays]);
+
   const scroll = (scrollOffset) => {
     scrollButtonRef.current.scrollLeft += scrollOffset;
   };
@@ -21,18 +33,20 @@ const WeekForecast = () => {
     <div className={style['week-information']}>
       <div className={style['week-information-header']}>
         <h2 className={style.week}>Week</h2>
-        <div className={style['scroll-week-buttons']}>
-          <button
-            className={style['scroll-button']}
-            onClick={() => scroll(-164 * 3)}>
-            {'<'}
-          </button>
-          <button
-            className={style['scroll-button']}
-            onClick={() => scroll(164 * 3)}>
-            {'>'}
-          </button>
-        </div>
+        {showButtons && (
+          <div className={style['scroll-week-buttons']}>
+            <button
+              className={style['scroll-button']}
+              onClick={() => scroll(-180)}>
+              {'<'}
+            </button>
+            <button
+              className={style['scroll-button']}
+              onClick={() => scroll(180)}>
+              {'>'}
+            </button>
+          </div>
+        )}
       </div>
       <div className={style.list} ref={scrollButtonRef}>
         {currentCityWeatherByDays.map((day) => {

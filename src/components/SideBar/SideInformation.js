@@ -49,7 +49,10 @@ const SideInformation = () => {
       <div className={style['main-information']}>
         <h1>{getDayOfWeek(currentCity?.currentWeather?.days[0]?.datetime)}</h1>
         <p className={style['temperature-information']}>
-          <WeatherIcons icon={currentCity?.currentWeather?.days[0]?.icon} />
+          <WeatherIcons
+            icon={currentCity?.currentWeather?.days[0]?.icon}
+            size={2}
+          />
           {currentCity.currentWeather?.days[0]?.temp}
           <span>°C</span>
         </p>

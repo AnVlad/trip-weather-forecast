@@ -1,19 +1,19 @@
 .week-information {
-  margin-top: 38px;
+  margin-top: 15px;
 }
 
 .week {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .list {
   display: flex;
-  margin: 40px 20px;
-  gap: 64px;
+  margin: 15px 0px;
+  gap: 2.8vw;
 
   overflow: auto;
-  max-width: 1100px;
+  max-width: 930px;
   scroll-behavior: smooth;
 }
 
@@ -33,7 +33,7 @@
 .week-information-header {
   display: flex;
   justify-content: space-between;
-  max-width: 1120px;
+  max-width: 930px;
 }
 
 .scroll-week-buttons {
@@ -43,7 +43,7 @@
 .scroll-button {
   width: 40px;
   height: 40px;
-  background-color: rgb(242, 244, 248); /* Specified color */
+  background-color: rgb(242, 244, 248);
   color: #000;
   border: none;
   cursor: pointer;

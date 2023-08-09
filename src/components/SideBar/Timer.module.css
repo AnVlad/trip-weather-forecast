@@ -6,7 +6,7 @@
 }
 
 .timer p {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 100;
   text-transform: uppercase;
   text-align: center;
@@ -16,7 +16,7 @@
 
 .timer h2 {
   margin: 0;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 800;
   text-align: center;
 }

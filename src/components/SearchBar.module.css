@@ -2,14 +2,15 @@
   display: flex;
   position: relative;
   justify-content: space-between;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 930px;
 }
 
 .search-input input {
-  width: 300px;
-  height: 60px;
-  font-size: 20px;
+  width: 20%;
+  height: 50px;
+  font-size: 14px;
   padding-left: 50px;
 
   border-radius: 8px;
@@ -19,7 +20,7 @@
 }
 
 .search-input input::placeholder {
-  font-size: 20px;
+  font-size: 14px;
   letter-spacing: -1px;
   color: black;
 }

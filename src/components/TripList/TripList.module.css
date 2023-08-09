@@ -2,7 +2,7 @@
   display: flex;
   overflow: auto;
 
-  gap: 65px;
+  gap: 50px;
   max-width: 1180px;
   width: 100%;
 }

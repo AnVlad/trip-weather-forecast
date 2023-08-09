@@ -42,7 +42,7 @@ function App() {
     };
 
     setDefaultCity();
-  }, [dispatch, maxDate, minDate]);
+  }, [dispatch, maxDate, minDate, tripList.length]);
 
   return (
     <div className='App'>
