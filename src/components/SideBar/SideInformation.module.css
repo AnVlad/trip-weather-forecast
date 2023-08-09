@@ -7,6 +7,15 @@
   color: #fff;
 }
 
+.penguin-icon {
+  width: 80px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  cursor: pointer;
+}
+
 /* .icons {
   position: relative;
   height: 0px;
@@ -16,32 +25,6 @@
   margin-top: 50px;
   margin-right: -40px;
   position: relative;
-}
-
-.main-information .icon svg {
-  position: absolute;
-  width: 13vw;
-  z-index: -1;
-}
-
-.icon-1 {
-  top: -13vh;
-  left: 10vw;
-}
-
-.main-information .icon-2 {
-  top: -5vh;
-  left: -14vw;
-}
-
-.main-information .icon-3 {
-  top: 21vh;
-  left: 13vw;
-}
-
-.main-information .icon-4 {
-  top: 50vh;
-  left: -18vw;
 }
 
 .main-information h1 {

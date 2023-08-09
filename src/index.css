@@ -37,11 +37,22 @@ aside {
   top: 0;
   left: 66.666vw;
 
+  overflow: hidden;
+}
+
+.background {
+  z-index: -5;
+
+  width: 33.333vw;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 66.666vw;
+
   background-color: rgb(17 14 59);
 
   overflow: hidden;
-
-  z-index: -5;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -59,5 +70,13 @@ aside {
     height: 100vh;
     width: 100%;
     position: unset;
+  }
+
+  .background {
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    margin-top: -100vh;
+    position: relative;
   }
 }

@@ -4,12 +4,12 @@ import style from './SideInformation.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Timer from './Timer';
-import SVGElement from '../UI/SVGClouds';
 import WeatherIcons from '../UI/WeatherIcons';
 import getDayOfWeek from '../../helpers/getDayOfWeek';
 import weather from '../../services/weather';
 import { setCurrentWeather } from '../../Slicers/tripListSlice';
 import { setCity } from '../../Slicers/currentCitySlice';
+import { changeThemeMode } from '../../Slicers/booleanStateSlice';
 
 const SideInformation = () => {
   const currentCity = useSelector((state) => state.currentCity);
@@ -46,6 +46,14 @@ const SideInformation = () => {
 
   return (
     <aside className={style['side-information']}>
+      <img
+        onClick={() => {
+          dispatch(changeThemeMode());
+        }}
+        className={style['penguin-icon']}
+        src='https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Penguin-1024.png'
+        alt='penguin icon'
+      />
       <div className={style['main-information']}>
         <h1>{getDayOfWeek(currentCity?.currentWeather?.days[0]?.datetime)}</h1>
         <p className={style['temperature-information']}>
@@ -57,24 +65,6 @@ const SideInformation = () => {
           <span>°C</span>
         </p>
         <p className={style['location']}>{currentCity.city}</p>
-        <div className={style.icon}>
-          <SVGElement
-            className={style['icon-1']}
-            style={{ color: '#1d1a45' }}
-          />
-          <SVGElement
-            className={style['icon-2']}
-            style={{ color: '#1d1a45' }}
-          />
-          <SVGElement
-            className={style['icon-3']}
-            style={{ color: '#1d1a45' }}
-          />
-          <SVGElement
-            className={style['icon-4']}
-            style={{ color: '#1d1a45' }}
-          />
-        </div>
       </div>
       <Timer currentCity={currentCity} />
     </aside>

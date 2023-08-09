@@ -1,0 +1,51 @@
+.icon svg {
+  position: absolute;
+  width: 13vw;
+}
+
+.icon-1 {
+  top: 14vh;
+  left: 22vw;
+}
+
+.icon-2 {
+  top: 22vh;
+  left: -2vw;
+}
+
+.icon-3 {
+  top: 48vh;
+  left: 25vw;
+}
+
+.icon-4 {
+  top: 77vh;
+  left: -6vw;
+}
+
+@media only screen and (max-width: 1200px) {
+  .icon svg {
+    position: absolute;
+    width: 180px;
+  }
+
+  .icon-1 {
+    top: 14vh;
+    left: 72vw;
+  }
+
+  .icon-2 {
+    top: 22vh;
+    left: 20vw;
+  }
+
+  .icon-3 {
+    top: 48vh;
+    left: 65vw;
+  }
+
+  .icon-4 {
+    top: 77vh;
+    left: 13vw;
+  }
+}

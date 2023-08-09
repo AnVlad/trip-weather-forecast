@@ -2,13 +2,13 @@ import React from 'react';
 
 import style from './AddTripCard.module.css';
 import { useDispatch } from 'react-redux';
-import { show } from '../../Slicers/showModalSlice';
+import { showModal } from '../../Slicers/booleanStateSlice';
 
 const AddTripCard = () => {
   const dispatch = useDispatch();
 
   const handleShow = () => {
-    dispatch(show());
+    dispatch(showModal());
   };
 
   return (

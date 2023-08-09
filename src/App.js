@@ -9,11 +9,12 @@ import getMinMaxDate from './helpers/getMinMaxDate';
 import { addCity } from './Slicers/tripListSlice';
 import { setCity } from './Slicers/currentCitySlice';
 import weather from './services/weather';
+import Background from './components/UI/Background';
 
 function App() {
-  const showModal = useSelector((state) => state.showModal.show);
+  console.log(useSelector((state) => state));
+  const showModal = useSelector((state) => state.booleanState.showModal);
   const tripList = useSelector((state) => state.tripList);
-  console.log(tripList);
 
   const dispatch = useDispatch();
 
@@ -49,6 +50,7 @@ function App() {
       {showModal && <ModalWindow />}
       <Main />
       <SideInformation />
+      <Background />
     </div>
   );
 }

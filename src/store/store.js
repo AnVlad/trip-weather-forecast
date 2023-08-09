@@ -5,9 +5,9 @@ import storage from 'redux-persist/lib/storage';
 
 import currentCitySlice from '../Slicers/currentCitySlice';
 import tripListSlice from '../Slicers/tripListSlice';
-import showModalSlice from '../Slicers/showModalSlice';
 import searchSlice from '../Slicers/searchSlice';
 import sortSlice from '../Slicers/sortSlice';
+import booleanState from '../Slicers/booleanStateSlice';
 
 const persistConfig = {
   key: 'root',
@@ -18,7 +18,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   currentCity: currentCitySlice,
   tripList: tripListSlice,
-  showModal: showModalSlice,
+  booleanState: booleanState,
   searchByName: searchSlice,
   sort: sortSlice,
 });

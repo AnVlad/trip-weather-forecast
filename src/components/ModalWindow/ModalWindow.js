@@ -4,7 +4,7 @@ import style from './ModalWindow.module.css';
 import Button from '../UI/Button';
 import ModalForm from './ModalForm';
 import { useDispatch } from 'react-redux';
-import { show } from '../../Slicers/showModalSlice';
+import { showModal } from '../../Slicers/booleanStateSlice';
 import { addCity } from '../../Slicers/tripListSlice';
 
 const ModalWindow = () => {
@@ -19,7 +19,7 @@ const ModalWindow = () => {
   };
 
   const handleClose = () => {
-    dispatch(show());
+    dispatch(showModal());
   };
 
   return (
