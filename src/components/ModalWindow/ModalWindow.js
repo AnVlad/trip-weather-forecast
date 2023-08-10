@@ -6,6 +6,8 @@ import ModalForm from './ModalForm';
 import { useDispatch } from 'react-redux';
 import { showModal } from '../../Slicers/booleanStateSlice';
 import { addCity } from '../../Slicers/tripListSlice';
+import ModalWrap from './ModalWrap';
+import ModalHeader from './ModalHeader';
 
 const ModalWindow = () => {
   const dispatch = useDispatch();
@@ -23,16 +25,11 @@ const ModalWindow = () => {
   };
 
   return (
-    <div className={style['modal-window']} onClick={handleClose}>
+    <ModalWrap onClick={handleClose}>
       <div
         className={style['modal-window-content']}
         onClick={(event) => event.stopPropagation()}>
-        <div className={style['top-modal-window']}>
-          <h4>Create trip</h4>
-          <button className={style['close-button']} onClick={handleClose}>
-            X
-          </button>
-        </div>
+        <ModalHeader text={'Create trip'} onClick={handleClose} />
         <ModalForm setNewTripData={setNewTripData} />
 
         <div className={style['bottom-modal-window']}>
@@ -42,7 +39,7 @@ const ModalWindow = () => {
           <Button onClick={handleClose}>Cancel</Button>
         </div>
       </div>
-    </div>
+    </ModalWrap>
   );
 };
 

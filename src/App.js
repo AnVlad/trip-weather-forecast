@@ -10,10 +10,13 @@ import { addCity } from './Slicers/tripListSlice';
 import { setCity } from './Slicers/currentCitySlice';
 import weather from './services/weather';
 import Background from './components/UI/Background';
+import SignInModal from './components/ModalWindow/SignInModal';
 
 function App() {
-  console.log(useSelector((state) => state));
   const showModal = useSelector((state) => state.booleanState.showModal);
+  const showSignInModal = useSelector(
+    (state) => state.booleanState.showSignInModal
+  );
   const tripList = useSelector((state) => state.tripList);
 
   const dispatch = useDispatch();
@@ -51,6 +54,8 @@ function App() {
       <Main />
       <SideInformation />
       <Background />
+
+      {showSignInModal && <SignInModal />}
     </div>
   );
 }

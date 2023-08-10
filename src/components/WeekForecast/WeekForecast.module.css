@@ -13,7 +13,6 @@
   gap: 45px;
 
   overflow: auto;
-  max-width: 930px;
   scroll-behavior: smooth;
 }
 
@@ -33,7 +32,6 @@
 .week-information-header {
   display: flex;
   justify-content: space-between;
-  max-width: 930px;
 }
 
 .scroll-week-buttons {
