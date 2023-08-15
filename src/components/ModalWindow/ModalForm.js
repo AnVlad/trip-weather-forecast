@@ -5,7 +5,6 @@ import style from './ModalForm.module.css';
 
 import getMinMaxDate from '../../helpers/getMinMaxDate';
 import cityList from '../../cityList';
-import weather from '../../services/weather';
 import SVGDownArrow from '../UI/SVGDownArrow';
 
 const ModalForm = ({ setNewTripData }) => {
@@ -32,16 +31,12 @@ const ModalForm = ({ setNewTripData }) => {
 
       if (!currentCity) return;
 
-      const result = await weather.getWeather(startDate, endDate, city);
-
       const newTrip = {
         ...currentCity,
         startDate,
         endDate,
-        weather: result.data,
       };
 
-      console.log(newTrip);
       setNewTripData(newTrip);
     };
 

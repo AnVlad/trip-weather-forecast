@@ -8,6 +8,7 @@ import { showModal } from '../../Slicers/booleanStateSlice';
 import { addCity } from '../../Slicers/tripListSlice';
 import ModalWrap from './ModalWrap';
 import ModalHeader from './ModalHeader';
+import weather from '../../services/weather';
 
 const ModalWindow = () => {
   const dispatch = useDispatch();
@@ -16,7 +17,26 @@ const ModalWindow = () => {
   const handleClick = () => {
     if (!('city' in newTripData)) return;
 
-    dispatch(addCity(newTripData));
+    try {
+      const getWeatherForecast = async () => {
+        const result = await weather.getWeather(
+          newTripData.startDate,
+          newTripData.endDate,
+          newTripData.city
+        );
+
+        const updatedTripData = {
+          ...newTripData,
+          weather: result.data,
+        };
+        dispatch(addCity(updatedTripData));
+      };
+
+      getWeatherForecast();
+    } catch (error) {
+      console.error('Getting weather forecast error:', error);
+    }
+
     handleClose();
   };
 
