@@ -1,3 +1,7 @@
+# The link to the deployed site
+
+https://trip-weather-forecast.web.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
